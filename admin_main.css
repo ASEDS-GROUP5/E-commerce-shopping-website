@@ -1,0 +1,22 @@
+#mainMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(121, 7, 7);
+}
+#mainMenu li {
+  float: left;
+}
+
+#mainMenu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#mainMenu a:hover {
+    background-color: #111;
+}
