@@ -1,3 +1,9 @@
+body{
+    background: silver;
+    color: black;
+    font-family:'Times New Roman',Georgia, Times, serif;
+}
+
 #mainMenu {
     list-style-type: none;
     margin: 0;
@@ -20,3 +26,77 @@
 #mainMenu a:hover {
     background-color: #111;
 }
+.adminpanel{
+    background-color: rgb(241, 176, 152);
+    border: none;
+    padding:1px;
+    width: 100%;
+    margin: 0;
+
+
+}
+.dashb h3{
+    border:1px solid rgb(26, 12, 12);
+    width:30%;
+    padding: 4px;
+}
+.dashelement ul{
+    list-style-type: none;    
+    padding: 1px;
+    margin: 0px;
+
+
+}
+.dashelement li{
+    padding-bottom:60px ;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+aside{
+    float: left;
+    border:1px solid black;
+    width: 30%;
+    margin: 0;
+    padding:0;
+}
+.dashtitle{
+    float: left;
+    background-color: blueviolet;
+    width: 69%;
+    text-align: center;
+}
+.dashtitle h3{
+    padding: 20px;
+    margin: 0;
+}
+.dashbelement li{
+    list-style-type: none;
+    background-color: blueviolet;
+    border: 2px solid black;
+    float: left;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-right: 80px;
+    margin-bottom: 20px;
+    width: 160px;
+    text-align: center;
+    font-size: 30px;
+
+}
+.dashbelement li:nth-child(5){
+    margin-left: 10px;
+}
+.dashbelement li:nth-child(4){
+    margin-left: 100px;
+}
+a{
+    text-decoration: none;
+
+}
+.dashbelement{
+    float: left;
+    width: 60%;
+}
+
