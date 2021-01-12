@@ -20,29 +20,50 @@
     <div class="adminpanel">
         <h2>Admin panel</h2>
     </div>
-    <div class="dashb">
-        <h3>Dashboard</h3>
-    </div>
-    <div class="dashelement">
-        <aside>
+    <div class="countainer">
+        <div class="column menu">
+            <div class="dashb">
+                <h3>Dashboard</h3>
+            </div>
             <ul>
                 <li><a href="./admin_categories.html">Categories</a></li>
                 <li><a href="./adminStatistics.html">Statistics</a></li>
-                <li><a href="./admin_allusers.html">User</a></z></li>
+                <li><a href="./admin_allusers.html">User</a></li>
                 <li><a href="./admin_messages.html">Messages</a></li>
                 <li><a href="./admin_profile.html">Profile</a></li>
             </ul>
-        </aside>
-    </div>
-    <div class="dashtitle">
-        <h3>My Profile</h3>
-    </div>
-    <form>
-        <label for="username">Username</label>
-        <input type="text" name="username"><br>
-        <label for="email">email</label>
-        <input type="text" name="email"><br>
-        <label for="pass">Password</label>
-        <input type="password" name="pass"><br>
-        <input type="submit" value="Update Now">
-    </form>
+        </div>
+        <div class="column content">
+            <div class="dashtitle">
+                <h3>My Profile</h3>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="username" placeholder="Your name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="email" placeholder="Your email..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="pass">Password</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" name="pass" placeholder="Your password..">
+                    </div>
+                </div>
+                <div class="row">
+                        <input type="submit" value="Update Now">
+                </div>
+            </form>
+        </div>
