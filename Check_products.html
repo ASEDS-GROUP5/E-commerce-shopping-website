@@ -1,82 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <title>check products</title>
+    <meta charset="utf-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="TopBottom.css">
+    <script src=""></script>
+
+</head>
 <body>
-    <div class="jumbotron text-center">
-        <img src=""alt="E-commerce" style="width: 40px;height: 40px;float: left;">
-        <p>E-commerce</p>
-        <a href="http://">Home</a>
-        <a href="http://">Shop</a>
-        <a href="http://">Contact us</a>
-        <a href="http://">Help</a>
-        <img src="C:\Users\USER\Desktop\web development project\icons\iconfinder_icons_user_1564534.png" alt="Log in" style="width: 40px;height: 40px;float: left;">
-        <a href="http://">Log in</a>
-        <img src="C:\Users\USER\Desktop\web development project\icons\" alt="Panier"style="width: 40px;height: 40px;float: left;">
-        <a href="http://">Panier</a>
-        
-    
-    
+    <div class="center">
+        <ul>
+
+            <li id="a"><img src=""alt="E" style="width: 40px;height: 40px;float: left;"><p>E-commerce</p></li>
+            <li id="a"><a href="http://">Home</a></li>
+            <li id="a"><a href="http://">Shop</a></li>
+            <li id="a"><a href="Contact_us.html">Contact us</a></li>
+            <li id="a"><a href="Help.html">Help</a></li>
+            <li id="a"><img src="icons\iconfinder_icons_user_1564534.png" alt="Log in" style="width: 40px;height: 40px;float: left;"><a href="http://">Log in</a>
+            <li id="a"><img src="icons/cart.png" alt="Panier"style="width: 40px;height: 40px;float: left;"><a href="http://">Panier</a></li>
+        </ul>
     </div>
-<div>
-    <h1>ITEM'S FULL NAME</h1>
-    <img src="" alt="">
-    <img src="" alt="" style="height: 100px;width: 100px;">
-    <img src="" alt=""style="height: 100px;width: 100px;">
-    <img src="" alt=""style="height: 100px;width: 100px;">
-    <p>99.99$</p>
-    <form action="info.php">
-        <label for="fcolor">Color:</label><br>
-        <input type="color" name="fcolor" id="fcolor" value=""><br>
-        <label for="fsize">Size:</label><br>
-        <input type="radio" name="s" id="fsize"value="S">
-        <label for="s">S</label>
-        <input type="radio" name="xs" id="fsize"value="XS">
+    <div id="background">
+        <div id=part>
+            <h1>ITEM'S FULL NAME</h1>
+            <img src="" alt="">
+            <img src="" alt="" style="height: 100px;width: 100px;">
+            <img src="" alt=""style="height: 100px;width: 100px;">
+            <img src="" alt=""style="height: 100px;width: 100px;">
+            <p>99.99$</p>
+            <form action="info.php">
+                <label for="fcolor">Color:</label><br>
+                <input type="color" name="fcolor" id="fcolor" value=""><br>
+                <label for="fsize">Size:</label><br>
+                <input type="radio" name="s" id="fsize"value="S">
+                <label for="s">S</label>
+                <input type="radio" name="xs" id="fsize"value="XS">
+        
+                <label for="xs">XS</label>
+                <input type="radio" name="m" id="fsize"value="M">  
+                <label for="m">M</label>
+                <input type="radio" name="l" id="fsize" value="L">
+                <label for="l">L</label>
+                <input type="radio" name="xl" id="fsize">
+                <label for="xl">XL</label>
+                <input type="radio" name="xxl" id="XXL">
+        
+                <label for="xxl">XXL</label><br><br>
+            
+        
+        
+            
+            
+            
+                <label for="quantity">Quantity (between 1 and 5):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="5">
+                <input type="submit" value="Submit"><br><br>
+                <input type="submit" value="Add to bag">
+        
+            </form>
+            
+        
+        
+        </div>
 
-        <label for="xs">XS</label>
-        <input type="radio" name="m" id="fsize"value="M">  
-        <label for="m">M</label>
-        <input type="radio" name="l" id="fsize" value="L">
-        <label for="l">L</label>
-        <input type="radio" name="xl" id="fsize">
-        <label for="xl">XL</label>
-        <input type="radio" name="xxl" id="XXL">
-
-        <label for="xxl">XXL</label><br><br>
-    
+    </div>
 
 
-    
-    
-    
-        <label for="quantity">Quantity (between 1 and 5):</label>
-        <input type="number" id="quantity" name="quantity" min="1" max="5">
-        <input type="submit" value="Submit"><br><br>
-        <input type="submit" value="Add to bag">
 
-    </form>
-    
-
-
-</div>
-
-
-<div>
+<div class="center">
     <div>
         <h2>Our group</h2>
         <p>learn more about us !</p>
     </div>
     <div>
         <h3>Rate us</h3>
-        <img src="C:\Users\USER\Desktop\web development project\icons\iconfinder_Star_Gold_1398915.png" alt="rate us" style="float: left;height: 40px;width: 40px;">
+        <img src="icons\iconfinder_Star_Gold_1398915.png" alt="rate us" style="float: left;height: 40px;width: 40px;">
 
     </div><br>
     <div>
         <h2>Find us</h2>
-        <img src="C:\Users\USER\Desktop\web development project\icons\iconfinder_Instagram_glyph_svg_5335781.png" alt="Instagram"style="float: left;height: 40px;width: 40px;">
-        <a href="http://">Instagram</a><br><br>
-        <img src="C:\Users\USER\Desktop\web development project\icons\iconfinder_Rounded_Facebook_svg_5282541.png" alt="Facebook"style="float: left;height: 40px;width: 40px;">
-        <a href="http://">Facebook</a><br><br>
-        <img src="C:\Users\USER\Desktop\web development project\icons\iconfinder_Rounded_Twitter5_svg_5282551.png" alt="Twitter"style="float: left;height: 40px;width: 40px;">
-        <a href="http://">Twitter</a><br><br>
+        <ul>
+
+        
+            <li><img src="icons\iconfinder_Instagram_glyph_svg_5335781.png" alt="Instagram"style="float: left;height: 40px;width: 40px;"><a href="http://">Instagram</a></li>
+            <li><img src="icons\iconfinder_Rounded_Facebook_svg_5282541.png" alt="Facebook"style="float: left;height: 40px;width: 40px;"><a href="http://">Facebook</a></li>
+            <li><img src="icons\iconfinder_Rounded_Twitter5_svg_5282551.png" alt="Twitter"style="float: left;height: 40px;width: 40px;"><a href="http://">Twitter</a></li>
+        </ul>
     </div>
 </div>
 </body>
