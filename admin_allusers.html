@@ -5,18 +5,25 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Users</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./admin_main.css'>
     <script src='main.js'></script>
 </head>
 <body>
-    <nav>
-        <ul id="mainMenu">
-    
-            <li><a href="./home">Home</a></li>
-            <li><a href="./admin_addproduct.html">Add product</a></li>
-            <li><a href="">logout</a></li>
-        </ul>
-    </nav>
+    <header class="navbar" style="background-color:rgb(172, 13, 13);text-align:center;">
+        <a id="logo" class="col-sm-3" href="home.html" alt="Home"><span class="glyphicon glyphicon-leaf"></span><b> E-SHOP</b></a>
+        <nav class="col-sm-4" style="color:rgb(7, 7, 6);padding: 20px;font-size:large;">
+            <div class="navbar-header" style="color: mintcream;">
+                <a id="nav" href="home.html"><b>Home</b></a>
+                <a id="nav" href="./admin_addproduct.html"><span><img src="./img/icons/icons8-plus-50.png" style="height: 30px; width: 30px; "></img></span><b>Add product</b></a> |
+            </div>
+        </nav>
+        <div class="col-sm-5" style="padding: 19px;font-size: 20px;">
+            <div class="col-sm-4">
+                <a id="nav" href="login.html"> <span class="glyphicon glyphicon-log-out"></span><b>Log out</b></a>
+            </div>
+        </div>
+    </header>
     <div class="adminpanel">
         <h2>Admin panel</h2>
     </div>
@@ -37,4 +44,40 @@
             <div class="dashtitle">
                 <h3>All users</h3>
             </div>
+            <div class="table">
+                <table>
+                    <tr style="background-color: coral;">
+                        <th>ID</th>
+                        <th>User name</th>
+                        <th>User email</th>
+                        <th>registration date</th>
+                        <th>edit</th>
+                        <th>delete</th>
+                    </tr>
+                    <tr>
+                        <td>654231</td>
+                        <td>women's clothings</td>
+                        <td>300</td>
+                        <td></td>
+                        <td><button type="button" onclick=""><img src="./img/icons/icons8-support-50.png" style="width: 20px; height: 20px;" ></button></td>
+                        <td><button type="button" onclick=""><img src="./img/icons/icons8-cancel-50.png" style="width: 20px; height: 20px;"></button></td>
+                    </tr>
+                    <tr>
+                        <td>654233</td>
+                        <td>men's clothings</td>
+                        <td>100</td>
+                        <td></td>
+                        <td><button type="button" onclick=""><img src="./img/icons/icons8-support-50.png" style="width: 20px; height: 20px;" ></button></td>
+                        <td><button type="button" onclick=""><img src="./img/icons/icons8-cancel-50.png" style="width: 20px; height: 20px;"></button></td>
+                    </tr>
+                    <tr>
+                        <td>654235</td>
+                        <td>women's clothings</td>
+                        <td>100</td>
+                        <td></td>
+                        <td><button type="button" onclick=""><img src="./img/icons/icons8-support-50.png" style="width: 20px; height: 20px;" ></button></td>
+                        <td><button type="button" onclick=""><img src="./img/icons/icons8-cancel-50.png" style="width: 20px; height: 20px;"></button></td>
+                    </tr>
+                </table>
             </div>
+        </div>
