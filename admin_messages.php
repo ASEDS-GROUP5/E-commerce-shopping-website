@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Categories</title>
+    <title>Messages</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./admin_main.css'>
@@ -24,6 +24,7 @@
             </div>
         </div>
     </header>
+    
     <div class="adminpanel">
         <h2>Admin panel</h2>
     </div>
@@ -42,44 +43,52 @@
         </div>
         <div class="column content">
             <div class="dashtitle">
-                <h3>Categories</h3>
+                <h3>Messages</h3>
             </div>
             <div class="table">
-                <table> 
+                <table>
                     <tr style="background-color: coral;">
-                        <th>product ID</th>
-                        <th>category name</th>
-                        <th>total products</th>
-                        <th>Status</th>
-                        <th>edite</th>
+                        <th>firstname</th>
+                        <th>lastname</th>
+                        <th>email</th>
+                        <th>message</th>
+                        <th>date</th>
                         <th>delete</th>
                     </tr>
-                
-                    <tr>
-                        <td>654231</td>
-                        <td>women's clothings</td>
-                        <td>300</td>
-                        <td></td>
-                        <td><button type="button" onclick=""><img src="./img/icons/icons8-support-50.png" style="width: 20px; height: 20px;" ></button></td>
-                        <td><button type="button" onclick=""><img src="./img/icons/icons8-cancel-50.png" style="width: 20px; height: 20px;"></button></td>
-                    </tr>
-                    <tr>
-                        <td>654233</td>
-                        <td>men's clothings</td>
-                        <td>100</td>
-                        <td></td>
-                        <td><button type="button" onclick=""><img src="./img/icons/icons8-support-50.png" style="width: 20px; height: 20px;" ></button></td>
-                        <td><button type="button" onclick=""><img src="./img/icons/icons8-cancel-50.png" style="width: 20px; height: 20px;"></button></td>
-                    </tr>
-                    <tr>
-                        <td>654235</td>
-                        <td>women's clothings</td>
-                        <td>100</td>
-                        <td></td>
-                        <td><button type="button" onclick=""><img src="./img/icons/icons8-support-50.png" style="width: 20px; height: 20px;" ></button></td>
-                        <td><button type="button" onclick=""><img src="./img/icons/icons8-cancel-50.png" style="width: 20px; height: 20px;"></button></td>
-                    </tr>                   
+                    <?php
+                        $servername = "localhost"; $dbname = "ecommdb"; $user = "admin"; $pass = "admin";
+            
+                        try{
+                            $dbco = new PDO("mysql:host=$servername;dbname=$dbname", $user, $pass);
+                            $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                            
+                            /*Sélectionne toutes les valeurs dans la table messages*/
+                            $sth = $dbco->prepare("SELECT * FROM messages ");
+                            $sth->execute();
+                            foreach($sth as $row){
+                                $user_id=$row['user_id'];
+                                $first_name=$row['firstname'];
+                                $last_name=$row['lastname'];
+                                $email=$row['email'];
+                                $message=$row['message'];
+                                $date=$row['date'];
+                                echo "
+                                    <tr>
+                                        <td>".$first_name."</td>
+                                        <td>".$last_name."</td>
+                                        <td>".$email."</td>
+                                        <td>".$message."</td>
+                                        <td>".$date."</td>
+                                        <td><button type='button' onclick=''><img src=''./img/icons/icons8-cancel-50.png' style='width: 20px; height: 20px;'></button></td>
+                                    </tr>
+                                ";
+                            }
+                        }
+                  
+                        catch(PDOException $e){
+                            echo "Erreur : " . $e->getMessage();
+                        }
+                ?>
                 </table>
             </div>
         </div>
-    
