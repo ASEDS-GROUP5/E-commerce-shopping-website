@@ -30,7 +30,7 @@
                   ");
                   $sth->execute();
                   
-                  //On affiche le nombre d'entrées mise à jour
+                  //On redirige vers la même page
                   header("Location:admin_profile.html");
                 } else{
                   header('Location: admin_profile.html');

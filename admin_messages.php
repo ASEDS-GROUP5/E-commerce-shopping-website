@@ -34,10 +34,10 @@
                 <h3>Dashboard</h3>
             </div>
             <ul>
-                <li><a href="./admin_categories.html">Categories</a></li>
-                <li><a href="./adminStatistics.html">Statistics</a></li>
-                <li><a href="./admin_allusers.html">User</a></li>
-                <li><a href="./admin_messages.html">Messages</a></li>
+                <li><a href="./admin_categories.php">Categories</a></li>
+                <li><a href="./admin_Products.php">Products</a></li>
+                <li><a href="./admin_allusers.php">User</a></li>
+                <li><a href="./admin_messages.php">Messages</a></li>
                 <li><a href="./admin_profile.html">Profile</a></li>
             </ul>
         </div>
@@ -66,7 +66,6 @@
                             $sth = $dbco->prepare("SELECT * FROM messages ");
                             $sth->execute();
                             foreach($sth as $row){
-                                $user_id=$row['user_id'];
                                 $first_name=$row['firstname'];
                                 $last_name=$row['lastname'];
                                 $email=$row['email'];
