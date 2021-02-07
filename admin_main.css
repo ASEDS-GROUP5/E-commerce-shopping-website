@@ -7,30 +7,40 @@ a{
 body{
     
     color: black;
-    font-family:'Times New Roman',Georgia, Times, serif;
+    font-family:'Times New Roman',Georgia, Times, serif;    
+}
+a {
+    color: black;
 }
 
-#mainMenu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(121, 7, 7);
-}
-#mainMenu li {
-  float: left;
-}
-
-#mainMenu a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+a#logo:link,
+a#logo:visited {
+    background-color: rgb(14, 12, 12);
+    color: aliceblue;
+    width: 20%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 19px;
     text-decoration: none;
+    border-radius: 5px 5px 5px 5px;
 }
 
-#mainMenu a:hover {
-    background-color: #111;
+a#logo:hover,
+a#logo:active {
+    color: rgb(10, 9, 9);
+    background-color: snow;
+    transition: 0.5s;
+}
+
+a#nav:hover,
+a#nav:active {
+    color: lightgrey;
+    transition: 0.3s;
+}
+
+a#nav {
+    text-decoration: none;
 }
 .adminpanel{
     background-color: rgb(241, 176, 152);
@@ -61,10 +71,20 @@ body{
 .content{
     width: 70%;
 }
+.content ul :hover{
+    text-decoration: none;
+    background-color:burlywood;
+    color: black;
+}
 .menu ul{
     list-style-type:none;
     margin: 0;
     padding: 0;
+}
+.menu ul :hover{
+    text-decoration: none;
+    background-color:turquoise;
+    color: black;
 }
 .menu li a{
     color: white;
@@ -83,9 +103,6 @@ body{
     padding: 0;
 
 }
-
-
-
 .dashtitle{
     
     background-color: blueviolet;
@@ -148,6 +165,8 @@ input[type=submit]:hover {
     float: left;
     width: 25%;
     margin-top: 6px;
+    font-size: 18px;
+    padding-left:20px ;
 }
   
 .col-75 {
@@ -164,6 +183,25 @@ input[type=submit]:hover {
 }
 .con{
     border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+    background-color: #7770703f;
+    padding: 10px 90px 0 90px;
+    margin:0 120px 0 120px ;
+    
 }
+table{
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    margin-right: 120px;
+    margin-top: 6px;
+    background-color: lightgray;
+}
+table,td,th{
+    border: 1px solid black;
+}
+td, th {
+    text-align: center;
+    padding: 2px;
+    font-size: 18px;
+}
+
