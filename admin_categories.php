@@ -67,9 +67,9 @@
                                 echo "
                                     <tr>
                                         <td>".$row['category_id']."</td>
-                                        <td>".$row['name']."</td>
-                                        <td><button type='button' onclick=''><img src='./img/icons/icons8-support-50.png' style='width: 20px; height: 20px;' ></button></td>
-                                        <td><button type='button' onclick=''><img src='./img/icons/icons8-cancel-50.png' style='width: 20px; height: 20px;'></button></td>
+                                        <td>".$row['category_name']."</td>
+                                        <td><button type='button' onclick=''><a href='admin_edite_categories.php?id=". $row['category_id']."'><img src='./img/icons/icons8-support-50.png' style='width: 20px; height: 20px;' ></a></button></td>
+                                        <td><button type='button' onclick=''><a href='deletecategories.php?id=".$row['category_id']."'><img src='./img/icons/icons8-cancel-50.png' style='width: 20px; height: 20px;'></a></button></td>
                                     </tr>
                                 ";
                             }    

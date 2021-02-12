@@ -48,13 +48,11 @@
                 <table>
                     <tr style="background-color: coral;">
                         <th>user_id</th>
-                        <th>first name</th>
-                        <th>last name</th>
+                        <th>User name</th>
                         <th>email</th>
                         <th>password</th>
                         <th>address</th>
                         <th>contact</th>
-                        <th>edit</th>
                         <th>delete</th>
                     </tr>
                     <?php
@@ -69,8 +67,7 @@
                             $sth->execute();
                             foreach($sth as $row){
                                 $user_id=$row['user_id'];
-                                $first_name=$row['firstname'];
-                                $last_name=$row['lastname'];
+                                $first_name=$row['username'];
                                 $email=$row['email'];
                                 $password=$row['password'];
                                 $address=$row['address'];
@@ -79,13 +76,11 @@
                                     <tr>
                                         <td>".$user_id."</td>
                                         <td>".$first_name."</td>
-                                        <td>".$last_name."</td>
                                         <td>".$email."</td>
                                         <td>".$password."</td>
                                         <td>".$address."</td>
                                         <td>".$contact."</td>
-                                        <td><button type='button' onclick=''><img src='./img/icons/icons8-support-50.png' style='width: 20px; height: 20px;' ></button></td>
-                                        <td><button type='button' onclick=''><img src='./img/icons/icons8-cancel-50.png' style='width: 20px; height: 20px;'></button></td>
+                                        <td><button type='button' onclick=''><a href='deleteusers.php?id=".$user_id."'><img src='./img/icons/icons8-cancel-50.png' style='width: 20px; height: 20px;'></a></button></td>
                                     </tr>
                                 ";
                             }    

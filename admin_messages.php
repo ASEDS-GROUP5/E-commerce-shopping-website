@@ -48,8 +48,7 @@
             <div class="table">
                 <table>
                     <tr style="background-color: coral;">
-                        <th>firstname</th>
-                        <th>lastname</th>
+                        <th>Username</th>
                         <th>email</th>
                         <th>message</th>
                         <th>date</th>
@@ -66,19 +65,18 @@
                             $sth = $dbco->prepare("SELECT * FROM messages ");
                             $sth->execute();
                             foreach($sth as $row){
-                                $first_name=$row['firstname'];
-                                $last_name=$row['lastname'];
+                                $idm=$row['id_message'];
+                                $first_name=$row['username'];
                                 $email=$row['email'];
                                 $message=$row['message'];
                                 $date=$row['date'];
                                 echo "
                                     <tr>
                                         <td>".$first_name."</td>
-                                        <td>".$last_name."</td>
                                         <td>".$email."</td>
                                         <td>".$message."</td>
                                         <td>".$date."</td>
-                                        <td><button type='button' onclick=''><img src=''./img/icons/icons8-cancel-50.png' style='width: 20px; height: 20px;'></button></td>
+                                        <td><button type='button' onclick=''><a href='deletemessage.php?id=".$idm."'><img src='./img/icons/icons8-cancel-50.png' style='width: 20px; height: 20px;'></a></button></td>
                                     </tr>
                                 ";
                             }

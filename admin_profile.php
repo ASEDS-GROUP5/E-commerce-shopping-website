@@ -25,7 +25,7 @@
                   //On prépare la requête et on l'exécute
                   $sth = $dbco->prepare("
                     UPDATE users 
-                    SET email='$email', password = '$passw' , firstname='$username' 
+                    SET email='$email', password = '$passw' , username='$username' 
                     WHERE user_id=1
                   ");
                   $sth->execute();

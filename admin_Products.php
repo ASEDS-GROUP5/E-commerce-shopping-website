@@ -83,7 +83,7 @@
                                         <td>".$price."</td>
                                         <td><img src='".$photo."' style = 'height:30px; width:40px; '></td>
                                         <td>".$quantity."</td>
-                                        <td><button type='button' onclick=''><img src='./img/icons/icons8-cancel-50.png' style='width: 20px; height: 20px;'></button></td>
+                                        <td><button type='button' onclick=''><a href='deleteproduct.php?id=".$product_id."'><img src='./img/icons/icons8-cancel-50.png' style='width: 20px; height: 20px;'></a></button></td>
                                     </tr>
                                 ";
                             }
