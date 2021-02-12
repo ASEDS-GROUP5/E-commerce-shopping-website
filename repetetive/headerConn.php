@@ -19,13 +19,16 @@
                     <a id="nav" href="Help.html">Help</a>
                 </div>
             </nav>
-            <div class="col-sm-4 " style="padding: 19px;font-size: 20px; ">
-                <div class="col-sm-6 ">
-                    <a id="nav" href="login.html"> <span class="glyphicon glyphicon-log-in "></span><b> Log in</b></a>
+             <div class='col-sm-4' style='padding: 19px;font-size: 20px;'>
+                    <div class='col-xs-4'>
+                        <p style='color: rgb(243, 242, 242);margin-left: -60px;'>✔️Connected</p>
+                    </div>
+                    <div class='col-xs-4'>
+                        <a id='nav' href='login.html' style='margin-left:-10px;> <span class='glyphicon glyphicon-log-out'></span><b>Log out</b></a>
+                    </div>
+                    <div class='col-xs-4'>
+                        <a id='nav' href='shoppingCart.php'> <span class='glyphicon glyphicon-shopping-cart'></span><b>Basket</b></a>
+                    </div>
                 </div>
-                <div class="col-sm-6 ">
-                    <a id="nav" href="shoppingCart.html"> <span class="glyphicon glyphicon-shopping-cart "></span><b> Basket</b></a>
-                </div>
-            </div>
         </header>
     </div>
