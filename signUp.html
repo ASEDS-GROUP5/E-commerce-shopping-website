@@ -50,13 +50,13 @@
 
 <body style="background-image:url(img/signUp-background.jpeg);">
     <header class="navbar" style="background-color:rgb(172, 13, 13);text-align:center; ">
-        <a id="logo" class="col-sm-4 " href="home.html" alt="Home "><span class="glyphicon glyphicon-leaf "></span><b> E-SHOP</b></a>
+        <a id="logo" class="col-sm-4 " href=" " alt="Home "><span class="glyphicon glyphicon-leaf "></span><b> E-SHOP</b></a>
         <nav class="col-sm-4" style="color:rgb(7, 7, 6);padding: 20px;font-size:large; ">
             <div class="navbar-header " style="color: mintcream; ">
-                <a id="nav" href="home.html">Home</a> |
-                <a id="nav" href="">Shop</a> |
-                <a id="nav" href="Contact_us.html">Contact us</a> |
-                <a id="nav" href="Help.html">Help</a>
+                <a id="nav" href="home.php">Home</a> |
+                <a id="nav" href=" ">Shop</a> |
+                <a id="nav" href=" ">Contact us</a> |
+                <a id="nav" href=" ">Help</a>
             </div>
         </nav>
         <div class="col-sm-4 " style="padding: 19px;font-size: 20px; ">
@@ -64,7 +64,7 @@
                 <a id="nav" href="login.html"> <span class="glyphicon glyphicon-log-in "></span><b> Log in</b></a>
             </div>
             <div class="col-sm-6 ">
-                <a id="nav" href="shoppingCart.html "> <span class="glyphicon glyphicon-shopping-cart "></span><b> Basket</b></a>
+                <a id="nav" href="shoppingCart.php"> <span class="glyphicon glyphicon-shopping-cart "></span><b> Basket</b></a>
             </div>
         </div>
     </header>
@@ -72,45 +72,45 @@
         <div id="panel" class="panel panel-default">
             <div class="panel-heading text-center">Create account</div>
             <div class="panel-body" style="background-color: orange;">
-                <form method="POST">
+                <form method="POST" action="signin.php">
                     <div class="col-sm-4">
                         <ul>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input class="form-control" type="text" id="username" placeholder="Username">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input class="form-control" type="text" name="username" id="username" placeholder="Username" required>
                             </div>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span><input class="form-control" type="email" id="email" placeholder="Email adress">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span><input class="form-control" type="email" name="email" id="email" placeholder="Email adress" required>
                             </div>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span><input class="form-control" type="text" id="adress" placeholder="Adresse">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span><input class="form-control" type="text" name="adress" id="adress" placeholder="Adresse">
                             </div>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span><input class="form-control" type="number" id="phone" placeholder="Phone Number">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span><input class="form-control" type="number" name="phone" id="phone" placeholder="Phone Number" required>
                             </div>
                         </ul>
                     </div>
                     <div class="col-sm-4">
                         <ul>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-certificate"></i></span><input class="form-control" type="password" id="Password" placeholder="Password">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-certificate"></i></span><input class="form-control" type="password" name="password" id="Password" placeholder="Password" required>
                             </div>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input class="form-control" type="text" id="zipcode" placeholder="ZipCode">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input class="form-control" type="text" name="zipcode" id="zipcode" placeholder="ZipCode">
                             </div>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span><input class="form-control" type="text" id="city" placeholder="city">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span><input class="form-control" type="text" name="city" id="city" placeholder="city">
                             </div>
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span><input class="form-control" type="number" id="mobile" placeholder="Mobile Number">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span><input class="form-control" type="number" name="mobile" id="mobile" placeholder="Mobile Number">
                             </div>
                         </ul>
                     </div>
                     <br>
-                    <input type="checkbox" id="termscheck">
+                    <input type="checkbox" id="termscheck" required>
                     <label for="termscheck">Accept terms and conditions</label><br>
-                    <button type="submit" class="btn btn-default"><b> Sign Up</b></button>
+                    <input type="submit" name="formsend" id="formsend" value="Sign Up">
                 </form>
-
+                <!-- //ineserez du php ici -->
             </div>
         </div>
 

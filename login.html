@@ -42,34 +42,43 @@
         color: lightgrey;
         transition: 0.3s;
     }
+    
+    input[type="submit"] {
+        width: 70px;
+        background-color: gainsboro;
+        color: black;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: black;
+        color: snow;
+    }
 </style>
 
 
 <body background="img/signUp-background.jpeg">
     <header class="navbar" style="background-color:rgb(172, 13, 13);text-align:center;">
         <a id="logo" class="col-sm-4" href="home.html" alt="Home"><span class="glyphicon glyphicon-leaf"></span><b> E-SHOP</b></a>
-        <nav class="col-sm-4 text-center" style="color:rgb(7, 7, 6);padding: 20px;font-size:large;">
+        <nav class="col-sm-6 text-center" style="color:rgb(7, 7, 6);padding: 20px;font-size:large;margin-left: 50px;">
             <div class="navbar-header" style="color: mintcream;">
                 <a id="nav" href="home.html">Home</a> |
                 <a id="nav" href="">Shop</a> |
-                <a id="nav" href="Contact_us.html">Contact us</a> |
-                <a id="nav" href="Help.html">Help</a>
+                <a id="nav" href="group5/Contact_us.html">Contact us</a> |
+                <a id="nav" href="group5/Help.html">Help</a>
             </div>
         </nav>
-        <div class="col-sm-4" style="padding: 19px;font-size: 20px;">
-            <div class="col-sm-6">
-                <a id="nav" href="shoppingCart.html"> <span class="glyphicon glyphicon-shopping-cart"></span><b> Basket</b></a>
-            </div>
-        </div>
+
     </header>
 
     <div class="container" style="background-color: rgba(225, 225, 236, 0.336);width: 80%;border: snow solid 3px;">
         <div class="panel panel-default" style="background-color: orange;padding: 50px;margin: 50px;">
             <div class="panel-body">
                 <div class="col-sm-5 col-lg-5">
-                    <form method="post" autocomplete="on">
+
+
+                    <form method="POST" autocomplete="on" action="login.php">
                         <label for="Username">Username</label>
-                        <input type="text" id="Username" name="name" placeholder="enter username">
+                        <input type="text" id="Username" name="username" placeholder="enter username">
                         <br>
                         <label for="Password">Password</label>
                         <input type="password" id="Password" name="password" placeholder="enter password" autocomplete="off">
@@ -77,8 +86,9 @@
                         <input type="checkbox" id="remember" name="Remember">
                         <label for="remember">Remember me</label>
                         <br>
-                        <button type="submit" class="btn btn-default">Log in</button>
+                        <input type="submit" name="login" value="log In">
                     </form>
+
                 </div>
                 <div class="col-sm-5">
                     <h2>New Member</h2>
