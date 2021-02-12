@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Edit profile</title>
+    <title>Change password</title>
     <meta charset="utf-8">
     <meta name="viewport"content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylePravite.css">
@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src=""></script>
 </head>
-
-<body style="background-color: #003049;">
+<body style="background-color: #003049;" >
     <header class="navbar" style="background-color:rgb(172, 13, 13);text-align:center; ">
         <a id="logo" class="col-sm-4 " href="home.html" alt="Home "><span class="glyphicon glyphicon-leaf "></span><b> E-SHOP</b></a>
         <nav class="col-sm-4" style="color:rgb(7, 7, 6);padding: 20px;font-size:large; ">
@@ -34,85 +33,99 @@
         </div>
     </header>
     <hr>
-    
-    <div  id="background">
+    <div id="background">
         <div class="row">
             <div id="part2" class="col-sm-4  ">
                 <ul>
     
                     <li><img src="icons\iconfinder_SEO_cogwheels_setting_969265.png" alt="settings"style="float:left;width: 30px;height: 30px"><H2>My account</H2></li>
                     <hr style="color: black;size: 10px;">
-                    <li><img src="icons\iconfinder_icons_user_1564534.png" alt="profile" style="height:40px;width:40px;float: left;"><a href="Edit_profile.html">Edit profile</a></li><br>
-                    <li><img src="icons\18221.png" alt="paymant" style="height:40px;width:40px;float: left;"><a href="Edit_payment.html">Edit payment informations</a></li><br>
-                    <li><img src="icons\iconfinder_key-password-passcode-access_2205205.png" alt="password" style="height:40px;width:40px;float: left;"><a href="Change_password.html">Change password</a></li><br>
+                    <li><img src="icons\iconfinder_icons_user_1564534.png" alt="profile" style="height:40px;width:40px;float: left;"><a href="Edit_profile.php">Edit profile</a></li><br>
+                    <li><img src="icons\18221.png" alt="paymant" style="height:40px;width:40px;float: left;"><a href="Edit_payment.php">Edit payment informations</a></li><br>
+                    <li><img src="icons\iconfinder_key-password-passcode-access_2205205.png" alt="password" style="height:40px;width:40px;float: left;"><a href="Change_password.php">Change password</a></li><br>
                     <li><img src="icons\iconfinder_log-out_3324993.png" alt="log ou" style="float: left;height: 40px;width: 40px;"><a href="">Log out</a></li><br>
                 </ul>
             </div>
-    
             <div id="part" class="col-sm-8">
-                <main id=main class="center">
-                    <h1>Edit profile</h1> <hr color="black">
-                <p>Edit your account information and apply changes</p>
-                <div class="col-sm-4">
-                    <form action="">
-                        <label for="fname">First name: </label><br>
-                        <input type="text" id="fname" name="fname" value=""><br>
-                        <label for="fuser">Username:</label><br>
-                        <input type="text" name="fuser" id="fuser"value=""><br>
-                        <label for="fadress">Adress:</label><br>
-                        <input type="text" name="fadress" id="fadress"><br>
-                        <label for="fphone">Phone number:</label><br>
-                        <input type="number" name="fphone" id="fphone" value=""><br>
-    
-                    </form>
-                    
-                    
-    
-    
-                </div>
-                <div class="col-sm-4">
-                    <form action="profile.php">
-                        <label for="flname">Last name:</label><br>
-                        <input type="text" name="flname" id="flname" value=""><br>
-                        <label for="femail">Email adress:</label><br>
-                        <input type="email" name="femail" id="femail" value=""><br>
-                        <label for="fzip">Zipcode:</label><br>
-                        <input type="number" name="fzip" id="fzip" value=""><br>
-                        <label for="fmobile">Mobile number:</label><br>
-                        <input type="number" name="fmobile" id="fmobile"><br>
-                    
-                    </form>
-                    
-                </div><br>
-                <hr>
-    
-                <form action="profile.php" >
-                    <input type="submit" value="Apply changes"  style="border: 5px solid black;">
-                </form>
-                </main>
         
+                <h1>Edit profile</h1>
+                <p>Edit your account information and apply changes</p>
+        
+                <form action="Change_password.php" method="POST">
+                    
+                    <input type="password" name="fpass" placeholder="Actual password" id="label"><br><hr>
+                    
+                    <input type="password" name="fpass1"  placeholder="New password" id="label"><br><hr>
+                    
+                    <input type="password" name="fpass2"   placeholder="Comfirm new password" id="label"><br>
+                    <hr>
+                    <input type="submit" name="fsend" value="Apply changes" style="float: left;"><br>
+                    
+                    
+                    
+                </form>
+                <?php
+                if(!empty($_POST["fpass"]) && !empty($_POST["fpass1"]) && !empty($_POST["fpass"]) ){
+                    $servername="localhost";
+                    $dbname = "ecommdb (2)";
+                    $username="root";
+                    $password="";
+                    
+                    
+
+                    $actualPassword=$_POST["fpass"];
+                    $newPassword=$_POST["fpass1"];
+                    $conNewPassword=$_POST["fpass2"];
+                    
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        // set the PDO error mode to exception
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                        if($newPassword==$conNewPassword){
+                            $sql = "UPDATE users SET password='$newPassword' WHERE username='user1'";
+                    
+                            // Prepare statement
+                            $stmt = $conn->prepare($sql);
+                        
+                            // execute the query
+                            $stmt->execute();
+                            //echo "the Password is changed";
+                            //header("location:Change_password.html");
+                        
+                            // echo a message to say the UPDATE succeeded
+                            echo $stmt->rowCount() ."your passwword UPDATED successfully";
+
+                        }else{
+                            echo "Error";
+                        }
+                    
+                       
+                    } catch(PDOException $e) {
+                        echo $sql . "<br>" . $e->getMessage();
+                    }
+                    
+                    $conn = null;
+
+
+            }
                 
                 
+
+?>      
+
                 
                 
             </div>
-
         </div>
         
         
-        
-        
-        
-        
-        
-            
-            
-        
-        
-
+    
+    
     </div>
-
-
+    
+    
+    
     <footer class="container" style="background-color:rgb(172, 13, 13);width:100%;border-top: snow solid 3px;">
         <div class="col-sm-6 ">
             <a id="nav" href=" "><b> Our group<br>Learn more about us</b></a>
@@ -131,6 +144,6 @@
 
         </div>
     </footer>
-</body>
 
+</body>
 </html>

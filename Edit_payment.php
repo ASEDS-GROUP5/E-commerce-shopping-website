@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>check products</title>
+    <title>Edit payment</title>
+    
     <meta charset="utf-8">
     <meta name="viewport"content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylePravite.css">
@@ -11,10 +12,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src=""></script>
-
 </head>
-
-<body style="background-color: #003049;">
+<body style="background-color: #003049;" >
     <header class="navbar" style="background-color:rgb(172, 13, 13);text-align:center; ">
         <a id="logo" class="col-sm-4 " href="home.html" alt="Home "><span class="glyphicon glyphicon-leaf "></span><b> E-SHOP</b></a>
         <nav class="col-sm-4" style="color:rgb(7, 7, 6);padding: 20px;font-size:large; ">
@@ -36,63 +35,40 @@
     </header>
     <hr>
     <div id="background">
-        <div id=part style="margin-left:50px;margin-right: 50px;">
-            <h1>ITEM'S FULL NAME</h1>
-            <hr>
-            <div class="row">
-                <div class="col-sm-6">
-                    <img src="" alt="">
-                    <img src="" alt="" style="height: 100px;width: 100px;">
-                    <img src="" alt=""style="height: 100px;width: 100px;">
-                    <img src="" alt=""style="height: 100px;width: 100px;">
-                    <h3>Price:</h3>
-                    <p>99.99$</p>
-
-                </div>
-                <div class="col-sm-6">
-                    <form action="info.php">
-                        <label for="fcolor">Color:</label><br>
-                        <input type="color" name="fcolor" id="fcolor" value=""><br>
-                        <label for="fsize">Size:</label><br>
-                        <input type="radio" name="s" id="fsize"value="S">
-                        <label for="s">S</label>
-                        <input type="radio" name="xs" id="fsize"value="XS">
-                
-                        <label for="xs">XS</label>
-                        <input type="radio" name="m" id="fsize"value="M">  
-                        <label for="m">M</label>
-                        <input type="radio" name="l" id="fsize" value="L">
-                        <label for="l">L</label>
-                        <input type="radio" name="xl" id="fsize">
-                        <label for="xl">XL</label>
-                        <input type="radio" name="xxl" id="XXL">
-                
-                        <label for="xxl">XXL</label><br><br>
-                    
-                
-                
-                    
-                    
-                    
-                        <label for="quantity">Quantity (between 1 and 5):</label>
-                        <input type="number" id="quantity" name="quantity" min="1" max="5">
-                        <input type="submit" value="Submit"><br><br>
-                        <input type="submit" value="Add to bag">
-                
-                    </form>
+        <div class="row">
+            <div id="part2" class="col-sm-4  ">
+                <ul>
     
-    
-                </div>
+                    <li><img src="icons\iconfinder_SEO_cogwheels_setting_969265.png" alt="settings"style="float:left;width: 30px;height: 30px"><H2>My account</H2></li>
+                    <hr style="color: black;size: 10px;">
+                    <li><img src="icons\iconfinder_icons_user_1564534.png" alt="profile" style="height:40px;width:40px;float: left;"><a href="Edit_profile.php">Edit profile</a></li><br>
+                    <li><img src="icons\18221.png" alt="paymant" style="height:40px;width:40px;float: left;"><a href="Edit_payment.html">Edit payment informations</a></li><br>
+                    <li><img src="icons\iconfinder_key-password-passcode-access_2205205.png" alt="password" style="height:40px;width:40px;float: left;"><a href="Change_password.php">Change password</a></li><br>
+                    <li><img src="icons\iconfinder_log-out_3324993.png" alt="log ou" style="float: left;height: 40px;width: 40px;"><a href="">Log out</a></li><br>
+                </ul>
             </div>
-            
-            
-            
-            
+            <div id="part" class="col-sm-8">
         
+                <h1>Edit profile</h1>
+                <hr>
+                <p>Edit your account information and apply changes</p>
         
+                <form action="/Edit_payment.php">
+                    
+                    <label for="fnumber">Card number:</label>
+                    <input type="number" id="fnumber" name="fnumber" value=""><br>
+                    
+                    <label for="fdate">Expiration date:</label>
+                    <input type="date" name="fdate" id="fdate">
+                    <label for="femail">CVV:</label>
+                    <input type="number" name="femail" id="femail" value=""><br>
+                    <input type="submit" value="Apply changes">
+                    
+                </form>
+            </div>
         </div>
         
-
+        
     </div>
     <footer class="container" style="background-color:rgb(172, 13, 13);width:100%;border-top: snow solid 3px;">
         <div class="col-sm-6 ">
@@ -112,12 +88,9 @@
 
         </div>
     </footer>
-
     
     
-
-
-
-
+    
+    
 </body>
 </html>
