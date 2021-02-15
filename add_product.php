@@ -103,8 +103,14 @@
 
             
 			// create sql
-			$sql = "INSERT INTO products(product_id, category, sub_category, product_name, key_words, price, photo, quantity, size) VALUES('$reference' ,'$category' ,'$sub_category','$name','$keyWords','$price','$path','$quantity','$size')";
-
+$q1="SELECT category_id from category where category_name='".$category."'";
+            $q2="SELECT sub_category_id from subcat where sub_category='".$sub_category."'";
+            $result1=mysqli_query($conn, $q1);
+            $result2=mysqli_query($conn, $q2);
+            $q11 = mysqli_fetch_assoc($result1);
+            $q22 = mysqli_fetch_assoc($result2);
+            print_r($q11);
+			$sql = "INSERT INTO products(product_id, category_id, sub_category_id, product_name, keyo, price, photo, quantity, size) VALUES('$reference' ,".$q11['category_id']." ,".$q22['sub_category_id'].",'$name','$keyWords','$price','$path','$quantity','$size')";
 			// save to db and check
 			if(mysqli_query($conn, $sql)){
 				// success
